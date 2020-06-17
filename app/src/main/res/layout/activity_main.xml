@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAD6D6"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/personName"
+        style="@android:style/Widget.AutoCompleteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:autofillHints="@string/txtName"
+        android:background="#03A9F4"
+        android:ems="10"
+        android:hint="@string/txtName"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/emailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="311dp"
+        android:layout_marginBottom="185dp"
+        android:autofillHints="@string/txtMail"
+        android:background="#03A9F4"
+        android:ems="10"
+        android:hint="@string/txtMail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/resultWindow"
+        app:layout_constraintStart_toStartOf="@+id/personName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonOK"
+        android:layout_width="211dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:background="#03A9F4"
+        android:text="@string/buttonOK"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
+
+    <Button
+
+        android:id="@+id/buttonClear"
+        android:layout_width="211dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="228dp"
+        android:background="#03A9F4"
+        android:onClick="clear"
+        android:text="@string/buttonClear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="176dp"
+        android:text="@string/txtName"
+        app:layout_constraintStart_toStartOf="@+id/personName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/txtMail"
+        app:layout_constraintBottom_toTopOf="@+id/emailAddress"
+        app:layout_constraintStart_toStartOf="@+id/emailAddress" />
+
+    <TextView
+        android:id="@+id/resultWindow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
