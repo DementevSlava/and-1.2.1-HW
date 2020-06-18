@@ -17,23 +17,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        add();
         viewName = findViewById(R.id.personName);
         viewEmail = findViewById(R.id.emailAddress);
         textView = findViewById(R.id.resultWindow);
 
     }
 
-    private void add() {
-        Button buttonOk = findViewById(R.id.buttonOK);
-
-        buttonOk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    public void add(View view) {
                 textView.setText("Подписка успешно оформлена для пользователя " + viewName.getText().toString()
                         + " , почта: " + viewEmail.getText().toString());
-            }
-        });
     }
 
     public void clear(View view) {
