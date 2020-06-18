@@ -1,11 +1,11 @@
 package com.dementev.HW121;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         add();
         viewName = findViewById(R.id.personName);
         viewEmail = findViewById(R.id.emailAddress);
-
+        textView = findViewById(R.id.resultWindow);
 
     }
 
@@ -34,11 +34,9 @@ public class MainActivity extends AppCompatActivity {
                         + " , почта: " + viewEmail.getText().toString());
             }
         });
-        textView = findViewById(R.id.resultWindow);
     }
 
     public void clear(View view) {
-        textView =findViewById(R.id.resultWindow);
         textView.setText("Данные удалены");
         viewName.setText("");
         viewEmail.setText("");
